@@ -1,0 +1,25 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color:black; 
+    
+}
+.contenedor{
+    height: 500px;
+    width: 500px;
+    color: white;;
+    border: solid 5 white;
+}
+.contenedor input{
+    border: 2px red solid; 
+    background-color: black;
+    color: white;
+}
+.contenedor button{
+    background-color: black;
+    border: solid 5 white;
+    color: white;
+}
+

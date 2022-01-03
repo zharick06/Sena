@@ -1,0 +1,60 @@
+package TallerCiclos;
+
+import javax.swing.JOptionPane;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		int opcion=2;
+		int total;
+		int semillas;
+		int menu2;
+		String menu;
+		menu="1.Tomate\n"
+			 +"2.Repollo\n"
+			 +"3.Papa\n"
+			 +"4.Cebolla\n"
+		      +"5.salir";
+		do {
+			opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));	
+			switch (opcion) {
+			case 1:
+				menu2=Integer.parseInt(JOptionPane.showInputDialog("1.Chonto\n"+"2.ensalada"));
+				semillas=Integer.parseInt(JOptionPane.showInputDialog("Cuantas semillas vas a llevar?"));
+				if (menu2==1) {
+					total=JOptionPane.showConfirmDialog(null, "El total a pagar es: $"+(15*semillas));
+					System.out.println("Tomate chonto X " + semillas+ "es igual a= $"+ (15*semillas));
+				}
+				else if (menu2==2) {
+					total=JOptionPane.showConfirmDialog(null, "El total a pagar es: $"+(20*semillas));
+					System.out.println("Tomate Ensalada X " + semillas+ "es igual a= $"+ (20*semillas));
+				}
+				
+				
+				break;
+			case 2:
+				
+				break;
+				
+
+			case 3:
+				
+				break;
+				
+
+			case 4:
+				
+				break;
+				
+
+				
+
+			default:
+				break;
+			}
+			
+		} while (opcion!=5);
+		
+		
+	}
+
+}

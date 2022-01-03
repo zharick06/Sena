@@ -1,0 +1,179 @@
+package gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import Procesos.Procesos;
+import Procesos.Usuarios;
+
+public class VentanaOperaciones extends JFrame implements ActionListener{
+
+	private JPanel contentPane;
+	private JTextField contDiaActual;
+	private JTextField contMesActual;
+	private JTextField contAnoActual;
+	private JTextField contAnoUsuario;
+	private JTextField contMesUsuario;
+	private JTextField contDiaUsuario;
+	private JTextField textNombre;
+	private JLabel lblmayor;
+	private JButton btnListaPersona;
+	private JButton btnButtonEdad;
+	Procesos misProcesos;
+
+	public VentanaOperaciones() {
+		misProcesos=new Procesos();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		iniciarComponentes();	
+		
+		setTitle("VENTANA DE MAYOR DE EDAD");
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+	}
+
+	private void iniciarComponentes() {
+		// TODO Auto-generated method stub
+		
+		setBounds(100, 100, 603, 562);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		contDiaActual = new JTextField();
+		contDiaActual.setBounds(107, 171, 86, 20);
+		contentPane.add(contDiaActual);
+		contDiaActual.setColumns(10);
+		
+		JLabel txtDia = new JLabel("Dia actual");
+		txtDia.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtDia.setBounds(34, 176, 86, 14);
+		contentPane.add(txtDia);
+		
+		contMesActual = new JTextField();
+		contMesActual.setBounds(107, 222, 86, 20);
+		contentPane.add(contMesActual);
+		contMesActual.setColumns(10);
+		
+		contAnoActual = new JTextField();
+		contAnoActual.setBounds(107, 270, 86, 20);
+		contentPane.add(contAnoActual);
+		contAnoActual.setColumns(10);
+		
+		JLabel txtMes = new JLabel("Mes actual");
+		txtMes.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtMes.setBounds(34, 227, 75, 14);
+		contentPane.add(txtMes);
+		
+		JLabel txtAno = new JLabel("A\u00F1o actual ");
+		txtAno.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtAno.setBounds(34, 275, 75, 14);
+		contentPane.add(txtAno);
+		
+		JLabel txtDiaUsuario = new JLabel("Dia Usuario");
+		txtDiaUsuario.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtDiaUsuario.setBounds(318, 176, 86, 14);
+		contentPane.add(txtDiaUsuario);
+		
+		JLabel txtMesUsuario = new JLabel("Mes Usuario");
+		txtMesUsuario.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtMesUsuario.setBounds(318, 227, 75, 14);
+		contentPane.add(txtMesUsuario);
+		
+		JLabel txtAnoUsuario = new JLabel("A\u00F1o usuario");
+		txtAnoUsuario.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		txtAnoUsuario.setBounds(318, 275, 75, 14);
+		contentPane.add(txtAnoUsuario);
+		
+		contAnoUsuario = new JTextField();
+		contAnoUsuario.setColumns(10);
+		contAnoUsuario.setBounds(403, 270, 86, 20);
+		contentPane.add(contAnoUsuario);
+		
+		contMesUsuario = new JTextField();
+		contMesUsuario.setColumns(10);
+		contMesUsuario.setBounds(403, 222, 86, 20);
+		contentPane.add(contMesUsuario);
+		
+		contDiaUsuario = new JTextField();
+		contDiaUsuario.setColumns(10);
+		contDiaUsuario.setBounds(403, 171, 86, 20);
+		contentPane.add(contDiaUsuario);
+		
+		JLabel lblTtitulo = new JLabel("A\u00F1o de nacimiento");
+		lblTtitulo.setFont(new Font("Sitka Text", Font.BOLD, 15));
+		lblTtitulo.setBounds(318, 124, 239, 20);
+		contentPane.add(lblTtitulo);
+		
+		JLabel lblTtitulo_1 = new JLabel("Fecha de a\u00F1o actual");
+		lblTtitulo_1.setFont(new Font("Sitka Text", Font.BOLD, 15));
+		lblTtitulo_1.setBounds(34, 124, 239, 20);
+		contentPane.add(lblTtitulo_1);
+		
+		JLabel lblTitulo = new JLabel("Mayor de edad");
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 19));
+		lblTitulo.setBounds(199, 11, 246, 23);
+		contentPane.add(lblTitulo);
+		
+		btnButtonEdad = new JButton("\u00BFSoy mayor de edad?");
+		btnButtonEdad.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnButtonEdad.addActionListener(this);
+		btnButtonEdad.setBounds(171, 342, 233, 23);
+		contentPane.add(btnButtonEdad);
+		
+		btnListaPersona = new JButton("Lista Persona");
+		btnListaPersona.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnListaPersona.addActionListener(this);
+		btnListaPersona.setBounds(171, 438, 233, 23);
+		contentPane.add(btnListaPersona);
+		
+		JLabel lblNewLabel = new JLabel("Nombre");
+		lblNewLabel.setFont(new Font("Sitka Text", Font.BOLD, 12));
+		lblNewLabel.setBounds(34, 65, 86, 14);
+		contentPane.add(lblNewLabel);
+		
+		textNombre = new JTextField();
+		textNombre.setColumns(10);
+		textNombre.setBounds(96, 60, 253, 20);
+		contentPane.add(textNombre);
+		
+	    lblmayor = new JLabel();
+		lblmayor.setBounds(259, 391, 46, 14);
+		contentPane.add( lblmayor);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==btnListaPersona) {
+			ListadoPersonas miListado=new ListadoPersonas();
+			miListado.setVisible(true);			
+		}
+		
+		else if (e.getSource()==btnButtonEdad) {
+			Usuarios miUsuario=new Usuarios();
+			try {
+				miUsuario.setNombre(textNombre.getText());
+				miUsuario.setEdad(misProcesos.calculaEdad);
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+			
+		}
+		
+		
+	}
+
+}

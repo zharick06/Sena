@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/zharick/Eclipse/Talleres/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+4193540579.index
+2247465387.index

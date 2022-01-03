@@ -1,0 +1,42 @@
+package Ventanas;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.Font;
+
+public class VentanaPrincipal extends JFrame {
+
+	private JPanel contentPane;
+
+	public VentanaPrincipal() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(400,500);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		iniciarComponentes();
+		
+	}
+
+	private void iniciarComponentes() {
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel etiTitulo = new JLabel("Registrar");
+		etiTitulo.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 16));
+		etiTitulo.setForeground(Color.BLACK);
+		etiTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		etiTitulo.setBounds(106, 0, 189, 35);
+		contentPane.add(etiTitulo);
+		
+		
+	}
+}

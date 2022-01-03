@@ -1,0 +1,118 @@
+package Ventanas;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+
+public class VentanaPrincipal extends JFrame {
+
+	private JPanel contentPane;
+	private JTextArea areaResultado;
+
+	public VentanaPrincipal() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(401,748);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		iniciarComponentes();
+		
+	}
+
+	private void iniciarComponentes() {
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel etiTitulo = new JLabel("Registrar");
+		etiTitulo.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 16));
+		etiTitulo.setForeground(Color.BLACK);
+		etiTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		etiTitulo.setBounds(106, 0, 189, 35);
+		contentPane.add(etiTitulo);
+		
+		JLabel lblDocumento = new JLabel("Documento:");
+		lblDocumento.setBounds(26, 87, 108, 15);
+		contentPane.add(lblDocumento);
+		
+		JTextPane txtdocumento = new JTextPane();
+		txtdocumento.setBounds(118, 81, 230, 21);
+		contentPane.add(txtdocumento);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setBounds(26, 120, 70, 15);
+		contentPane.add(lblNombre);
+		
+		JTextPane txtNombre = new JTextPane();
+		txtNombre.setBounds(94, 114, 230, 21);
+		contentPane.add(txtNombre);
+		
+		JLabel lblEdad = new JLabel("Edad:");
+		lblEdad.setBounds(26, 157, 70, 15);
+		contentPane.add(lblEdad);
+		
+		JTextPane txtEdad = new JTextPane();
+		txtEdad.setBounds(72, 151, 98, 21);
+		contentPane.add(txtEdad);
+		
+		JLabel lblPeso = new JLabel("Peso:");
+		lblPeso.setBounds(26, 201, 70, 15);
+		contentPane.add(lblPeso);
+		
+		JTextPane txtpnPeso = new JTextPane();
+		txtpnPeso.setBounds(72, 195, 134, 21);
+		contentPane.add(txtpnPeso);
+		
+		JLabel lblTalla = new JLabel("Talla:");
+		lblTalla.setBounds(26, 243, 53, 15);
+		contentPane.add(lblTalla);
+		
+		JTextPane txtpnTalla = new JTextPane();
+		txtpnTalla.setBounds(72, 237, 114, 21);
+		contentPane.add(txtpnTalla);
+		
+		JLabel lblResultado = new JLabel("Resultado:");
+		lblResultado.setBounds(26, 296, 108, 15);
+		contentPane.add(lblResultado);
+		
+		JLabel lblEtiresultado = new JLabel("");
+		lblEtiresultado.setBounds(116, 296, 179, 15);
+		contentPane.add(lblEtiresultado);
+		
+		JButton btnCalcularimc = new JButton("CalcularIMC");
+		btnCalcularimc.setBounds(12, 363, 117, 25);
+		contentPane.add(btnCalcularimc);
+		
+		JButton btnCalcularpromedio = new JButton("CalcularPromedio");
+		btnCalcularpromedio.setBounds(140, 363, 168, 25);
+		contentPane.add(btnCalcularpromedio);
+		
+		JButton btnRegistrar = new JButton("Registrar");
+		btnRegistrar.setBounds(12, 415, 117, 25);
+		contentPane.add(btnRegistrar);
+		
+		JButton btnListapersonas = new JButton("ListaPersonas");
+		btnListapersonas.setBounds(140, 415, 155, 25);
+		contentPane.add(btnListapersonas);
+		
+		areaResultado = new JTextArea();
+		areaResultado.setBounds(26, 479, 349, 194);
+		JScrollPane scroll = new JScrollPane(areaResultado);
+		contentPane.add(areaResultado,scroll);
+	
+		
+		
+	}
+}

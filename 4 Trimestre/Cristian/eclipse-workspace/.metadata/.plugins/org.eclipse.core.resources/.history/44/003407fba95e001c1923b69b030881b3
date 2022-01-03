@@ -1,0 +1,19 @@
+package Procesos;
+
+public class Procesos {
+
+	public int calculaEdad(String anoactual, String anoUsuario, String diaActual, String diaUsuario, String mesActual, String mesUsuario) {
+	    int yearActual=Integer.parseInt(anoactual);
+	    int yearUser=Integer.parseInt(anoUsuario);
+	    int mountActual=Integer.parseInt(mesActual);
+	    int mountUser=Integer.parseInt(mesUsuario);
+	    int dayActual=Integer.parseInt(diaActual);
+	    int dayUser=Integer.parseInt(diaUsuario);
+	    
+	    int años= yearActual-
+		return 0;
+	}
+
+
+
+}

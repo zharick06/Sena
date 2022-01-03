@@ -1,0 +1,1 @@
+// Retorne un array con los números pares del 1 al n.tomados de un array

@@ -1,0 +1,76 @@
+package gui;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import Procesos.Procesos;
+
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+public class ListadoPersonas extends JDialog implements ActionListener{
+
+	private final JPanel contentPanel = new JPanel();
+	private JTextArea textArea;
+	Procesos misProcesos;
+	private JButton okButton;
+	private JButton cancelButton;
+
+
+	public ListadoPersonas() {
+		misProcesos=new Procesos();
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(12, 12, 426, 204);
+		contentPanel.add(scrollPane);
+		
+		textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				okButton = new JButton("OK");
+				okButton.setActionCommand("OK");
+				okButton.addActionListener(this);
+				buttonPane.add(okButton);
+				getRootPane().setDefaultButton(okButton);
+			}
+			{
+				cancelButton = new JButton("Cancel");
+				cancelButton.setActionCommand("Cancel");
+				cancelButton.addActionListener(this);
+				buttonPane.add(cancelButton);
+			}
+		}
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==okButton) {
+			
+			textArea.setText(misProcesos.imprimirUsuarios()+"");
+			
+		}
+		else if (e.getSource()==cancelButton) {
+			this.dispose();
+			
+		}
+		
+		
+	}
+}

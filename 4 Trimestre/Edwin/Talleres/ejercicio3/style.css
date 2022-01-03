@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  
+
+}
+.contenedor{
+    color: white;
+    border: 3px inset red;
+    width: 550px;
+    margin-top: 75px;
+    box-shadow:5px 5px 5px red;
+
+    
+}
+input{
+    border: red dotted 2px;
+    background-color: black;
+    color: white;
+}
+button{
+    border: red dotted 2px;
+    background-color: black;
+    color: white;
+
+}
+

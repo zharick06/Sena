@@ -1,0 +1,32 @@
+package Procesos;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Procesos {
+	ArrayList<Persona>listaPersona;
+	
+	public Procesos() {
+
+		listaPersona=new ArrayList<Persona>();
+				
+	
+	}
+
+	public void guardarUsuario(Persona miPersona) {
+		listaPersona.add(miPersona);
+		JOptionPane.showMessageDialog(null,"Se registro correctamente el usuario ✔","",JOptionPane.PLAIN_MESSAGE);
+		
+		
+	}
+
+	public String imprimirUsuario() {
+		
+		for (Persona persona : listaPersona) {
+			
+		}
+		return null;
+	}
+
+}

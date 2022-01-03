@@ -1,0 +1,12 @@
+package Procesos;
+
+public class Procesos {
+
+	public double calculaEdad(String text, String text2, String text3, String text4, String text5, String text6) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+}

@@ -1,0 +1,69 @@
+package Procesos;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Procesos {
+	ArrayList<Persona>listaPersona;
+	
+	public Procesos() {
+
+		listaPersona=new ArrayList<Persona>();
+				
+	
+	}
+
+	public void guardarUsuario(Persona miPersona) {
+		listaPersona.add(miPersona);
+		for (Persona persona : listaPersona) {
+			if (persona.getMIC()<18) {
+				JOptionPane.showMessageDialog(null,"Su indice de masa corporal muestra que usted tiene Anorexia ");
+				
+			}
+			else if (persona.getMIC() >=18) {
+				JOptionPane.showMessageDialog(null,"Su indice de masa corporal muestra que usted tiene Anorexia ");
+				
+			}
+			
+		}
+		JOptionPane.showMessageDialog(null,"Se registro correctamente la persona ✔","",JOptionPane.PLAIN_MESSAGE);
+		
+		
+	}
+
+	public String imprimirUsuario() {
+		String imp="";
+		if(listaPersona == null || listaPersona.size() == 0)
+		{
+			JOptionPane.showMessageDialog(null, "No hay personas que mostrar \n ", "ERROR",JOptionPane.ERROR_MESSAGE);
+		}
+		else {
+			
+			for (Persona persona : listaPersona) {
+				imp+=persona+"\n";
+			}
+			
+		}
+		
+		return imp;
+	}
+
+	public Double imprimirPromedio() {
+		double precioTotal = 0;
+		
+		if(listaPersona == null || listaPersona.size() == 0)
+		{
+			JOptionPane.showMessageDialog(null, "No hay Promedio que mostrar \n ", "ERROR",JOptionPane.ERROR_MESSAGE);
+		}else {
+			for(Persona persona : listaPersona) {
+			    precioTotal += persona.getMIC(); 
+			}
+			
+		}
+
+		
+		return (precioTotal)/listaPersona.size();
+	}
+
+}

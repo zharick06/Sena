@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Procesos.java&apos; to &apos;ClaculoPromedioGui/src/Procesos&apos;&#x0A;- Original project: &apos;ClaculoPromedioGui&apos;&#x0A;- Destination element: &apos;ClaculoPromedioGui/src/Procesos&apos;&#x0A;- Original element: &apos;Procesos.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;Procesos" element1="/src&lt;{Procesos.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1637072698607" units="1" version="1.0"/>
+</session>

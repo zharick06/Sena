@@ -1,0 +1,16 @@
+import gui.VentanaOperaciones;
+
+public class Procesos {
+	
+	public Procesos() {
+		
+		presentarVentana();
+	}
+	
+	private void presentarVentana() {
+		VentanaOperaciones miVentana =new VentanaOperaciones();
+		miVentana.setVisible(true);
+	}
+
+		
+}

@@ -1,0 +1,11 @@
+package Procesos;
+
+
+public class Persona {
+	private  String txtdocumento;
+	private String txtNombre;
+	private txtEdad;
+	private txtPeso;
+	private txtTalla;
+
+}

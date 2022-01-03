@@ -1,0 +1,52 @@
+﻿       AGENDAR EVENTO
+       
+
+    1. Especificar los requerimientos del evento
+       Las cosas que necesita el para realizar ese evento.
+
+    2. Tener un lugar para el evento
+        El lugar donde se va ha realizar ese evento.
+
+    3. Agendar una fecha
+       La fecha  en la que se tendrá planteado realizar ese evento.
+         
+    4. Tener una cantidad de participantes
+       Que cantidad de personas se tiene planeado enviar las invitaciones, y enviarlas.
+
+    5. Recibir las confirmaciones de los participantes  y los expositores que si van a asistir
+       Confirmar los asistentes para el evento. 
+   
+    6. Llenar datos de los participantes y de los expositores que confirmaron
+       llenar los datos para reservar un cupo y tener la información de los participantes. 
+
+    7. Que los expositores confirmen su tema de expocicion y sus materiales.
+        Saber la cantidad la cantidad de expositores y el tema que van ha exponer.
+      
+    8. Tener el el refrigerio que se le van a dar a los participantes y expositores confirmados
+       con la cantidad de participantes compara el refrigerio que se les dara
+
+
+                 EVENTO
+
+    1. Se agenda el evento
+       se agenda el evento con los requerimientos.
+
+    2. Se realiza el evento
+       se realiza el evento en cuestión.
+
+    3. Se realiza informe del evento
+       Se hace un informe de todo lo que paso, los inconvenientes, las falencias, etc. 
+
+    4. Se realiza un resumen de los temas tratos
+       Se hace un resumen de todos los temas que se expusieron . 
+
+    5. Se adjuntas fotos del evento
+       Se tomaran imágenes de todo el evento, haciendo un seguimiento del evento.
+
+    6. Se publica ese informe 
+       se publicara el  informe anterior y el resumen con las imágenes adjuntadas.
+
+    7. Con los comentarios de la anterior publicación se hacen encuestas y gráficos
+       para llevar un seguimiento publico y transparente  de los eventos.
+
+    8. Se publica lo anterior en la pagina web

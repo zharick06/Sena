@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+/media/zharick/ZHARICK/Sena/4 Trimestre/Cristian/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+1098086784.index
+2173019491.index
+3529971781.index
+3402793816.index
+151660837.index
+564995565.index
+4143398738.index
+4223231643.index

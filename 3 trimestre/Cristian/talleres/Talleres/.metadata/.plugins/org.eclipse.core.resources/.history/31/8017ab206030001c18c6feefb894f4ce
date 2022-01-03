@@ -1,0 +1,42 @@
+package TallerCiclos;
+
+import javax.swing.JOptionPane;
+
+public class Ejercicio2 {
+	public static void main(String[] args) {
+		int opcion=5;
+		String menu;
+		menu="Elija el tipo de vendedor \n\n"
+				+"1.A\n"
+				+"2.B\n"
+				+"3.C\n"
+				+"4.D\n";
+		do {
+			opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
+			int ventas=Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas ventas realizo?"));
+			double comision;
+			if (opcion == 1) {
+				comision=(ventas*0.8);
+				System.out.println("su comicion es de: " +comision);
+			}
+			else if (opcion==2) {
+				comision=(ventas*0.6);
+				System.out.println("su comicion es de: " +comision);
+				
+			}
+			else if (opcion==3) {
+				comision=(ventas*0.4);
+				System.out.println("su comicion es de: " +comision);
+				
+			}
+			else if (opcion==4) {
+				comision=(ventas*0.2);
+				System.out.println("su comicion es de: " +comision);
+				
+			}
+		} while (opcion!=5);
+		
+		 
+	}
+
+}

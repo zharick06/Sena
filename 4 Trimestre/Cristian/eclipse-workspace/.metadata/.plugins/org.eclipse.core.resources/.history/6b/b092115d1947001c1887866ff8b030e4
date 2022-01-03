@@ -1,0 +1,81 @@
+package Interfaces;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.UIManager;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JCheckBox;
+
+public class VentanaEventos extends JFrame {
+
+	private JPanel panelPrincipal;
+	private JTextField textnombre;
+	private JTextField textcodigo;
+
+	public VentanaEventos() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize( 620, 372);
+		setTitle("EVENTOS");
+		setLocationRelativeTo(null);
+		setResizable(false);
+		iniciarComponentes();
+		
+	}
+	public void iniciarComponentes() {
+		panelPrincipal = new JPanel();
+		panelPrincipal.setBackground(Color.DARK_GRAY);
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(panelPrincipal);
+		panelPrincipal.setLayout(null);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setForeground(Color.WHITE);
+		lblNombre.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblNombre.setBounds(29, 44, 84, 28);
+		panelPrincipal.add(lblNombre);
+		
+		textnombre = new JTextField();
+		textnombre.setBounds(102, 44, 194, 28);
+		panelPrincipal.add(textnombre);
+		textnombre.setColumns(10);
+		
+		JLabel lblCodigo = new JLabel("Codigo:");
+		lblCodigo.setForeground(Color.WHITE);
+		lblCodigo.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblCodigo.setBounds(29, 93, 84, 28);
+		panelPrincipal.add(lblCodigo);
+		
+		textcodigo = new JTextField();
+		textcodigo.setColumns(10);
+		textcodigo.setBounds(102, 94, 194, 28);
+		panelPrincipal.add(textcodigo);
+		
+		JLabel lblLugar = new JLabel("Lugar:");
+		lblLugar.setForeground(Color.WHITE);
+		lblLugar.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblLugar.setBounds(29, 133, 84, 28);
+		panelPrincipal.add(lblLugar);
+		
+		JLabel lblExpositores = new JLabel("Numero de Expositores:");
+		lblExpositores.setForeground(Color.WHITE);
+		lblExpositores.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblExpositores.setBounds(29, 171, 267, 28);
+		panelPrincipal.add(lblExpositores);
+		
+		JLabel lblParticipantes = new JLabel("Numero de Participantes:");
+		lblParticipantes.setForeground(Color.WHITE);
+		lblParticipantes.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblParticipantes.setBounds(29, 211, 267, 28);
+		panelPrincipal.add(lblParticipantes);
+		
+		
+	}
+}

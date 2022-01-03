@@ -1,0 +1,21 @@
+body{
+    margin: 0px;
+}
+#contenedor{
+    margin-top: 20px;
+    margin-left: 450px;
+    border: ridge 5px black;
+    border-radius: 19px;
+    width: 500px;
+    height: 500px;
+}
+#boton{
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    border: ridge white;
+    border-radius: 15PX;
+    margin-top: 220px;
+    margin-left: 220px;
+
+}

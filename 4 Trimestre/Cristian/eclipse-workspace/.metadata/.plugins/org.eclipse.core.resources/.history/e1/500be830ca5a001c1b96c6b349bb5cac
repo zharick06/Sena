@@ -1,0 +1,41 @@
+package Procesos;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Procesos {
+	ArrayList<Persona>listaPersona;
+	
+	public Procesos() {
+
+		listaPersona=new ArrayList<Persona>();
+				
+	
+	}
+
+	public void guardarUsuario(Persona miPersona) {
+		listaPersona.add(miPersona);
+		JOptionPane.showMessageDialog(null,"Se registro correctamente el usuario ✔","",JOptionPane.PLAIN_MESSAGE);
+		
+		
+	}
+
+	public String imprimirUsuario() {
+		String imp="";
+		if(listaPersona == null || listaPersona.size() == 0)
+		{
+			JOptionPane.showMessageDialog(null, "No hay Usuarios que mostrar \n ", "ERROR",JOptionPane.ERROR_MESSAGE);
+		}
+		else {
+			
+			for (Persona persona : listaPersona) {
+				imp+=persona;
+			}
+			
+		}
+		
+		return imp;
+	}
+
+}

@@ -1,0 +1,11 @@
+/* Seleccione los datos de todos los aprendices Cuyo estado de la asesoría es ASIGNADA. 
+Muestre los nombres, apellidos, el genero y el nombre del programa de formación de cada 
+aprendiz.*/
+select a.nombres, a.apellidos,a.sexo,p.nombre from aprendices a inner join asesorias e on  a.documento=e.aprendiz inner join programas p on  a.programa=p.codigo where e.estado='ASIGNADA' ;
+
+/*Seleccione los datos de TODOS los aprendices que tienen asesoría o que no tienen registro 
+de asesorías. Muestre los nombres, apellidos, el género y el nombre del programa de 
+formación de cada aprendiz*/
+
+select a.nombres, a.apellidos,a.sexo,p.nombre,ifNull(e.estado, 'El aprendiz no tiene registro') as estado  from asesorias e right join aprendices a on a.documento=e.aprendiz  inner join programas p on a.programa=p.codigo order by e.estado;
+select * from aprendices

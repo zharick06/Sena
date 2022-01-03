@@ -1,0 +1,28 @@
+package Interfaces;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class VentanaEventos extends JFrame {
+
+	private JPanel panelPrincipal;
+
+	public VentanaEventos() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+	}
+	public void iniciarComponentes() {
+		panelPrincipal = new JPanel();
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		panelPrincipal.setLayout(new BorderLayout(0, 0));
+		setContentPane(panelPrincipal);
+		
+		
+	}
+
+}

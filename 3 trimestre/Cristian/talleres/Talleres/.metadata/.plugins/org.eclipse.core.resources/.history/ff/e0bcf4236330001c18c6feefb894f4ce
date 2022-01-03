@@ -1,0 +1,23 @@
+package TallerCiclos;
+
+import javax.swing.JOptionPane;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+		int opcion=2;
+		String menu;
+		menu="1.Comprar\n"+"2.salir";
+		
+		String menu2;
+		menu2="Tomate\n"
+			 +"Repollo"
+			 +"Papa"
+			 +"Cebolla";
+		do {
+			opcion=Integer.parseInt(JOptionPane.showInputDialog(menu));
+		} while (opcion!=2);
+		
+		
+	}
+
+}

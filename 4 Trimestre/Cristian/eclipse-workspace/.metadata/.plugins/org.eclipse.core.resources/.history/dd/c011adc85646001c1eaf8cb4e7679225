@@ -1,0 +1,43 @@
+package gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class VentanaOperaciones extends JFrame {
+
+	private JPanel panelPrincipal;
+
+
+	public VentanaOperaciones() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize( 620, 372);
+		iniciarComponentes();
+		
+		
+	}
+	private void iniciarComponentes() {
+		panelPrincipal = new JPanel();
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		panelPrincipal.setLayout(null);
+		setContentPane(panelPrincipal);
+		
+		JLabel lblTitulo = new JLabel("CALCULAR PROMEDIO");
+		lblTitulo.setFont(new Font("NanumSquare Bold", Font.BOLD | Font.ITALIC, 25));
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setBounds(12, 12, 596, 24);
+		panelPrincipal.add(lblTitulo);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNombre.setBounds(24, 91, 70, 15);
+		panelPrincipal.add(lblNombre);
+		
+	}
+}

@@ -1,0 +1,97 @@
+package gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+
+public class VentanaOperaciones extends JFrame {
+
+	private JPanel panelPrincipal;
+
+
+	public VentanaOperaciones() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize( 620, 372);
+		iniciarComponentes();
+		
+		
+	}
+	private void iniciarComponentes() {
+		panelPrincipal = new JPanel();
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		panelPrincipal.setLayout(null);
+		setContentPane(panelPrincipal);
+		
+		JLabel lblTitulo = new JLabel("CALCULAR PROMEDIO");
+		lblTitulo.setFont(new Font("NanumSquare Bold", Font.BOLD | Font.ITALIC, 25));
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setBounds(12, 12, 596, 24);
+		panelPrincipal.add(lblTitulo);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNombre.setBounds(23, 73, 70, 15);
+		panelPrincipal.add(lblNombre);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(93, 73, 348, 30);
+		panelPrincipal.add(textPane);
+		
+		JLabel lblNota1 = new JLabel("Nota1:");
+		lblNota1.setBounds(23, 126, 70, 15);
+		panelPrincipal.add(lblNota1);
+		
+		JTextPane textnota1 = new JTextPane();
+		textnota1.setBounds(81, 120, 70, 30);
+		panelPrincipal.add(textnota1);
+		
+		JLabel lblNota2 = new JLabel("Nota2:");
+		lblNota2.setBounds(183, 126, 70, 15);
+		panelPrincipal.add(lblNota2);
+		
+		JTextPane textnota2 = new JTextPane();
+		textnota2.setBounds(242, 120, 70, 30);
+		panelPrincipal.add(textnota2);
+		
+		JLabel lblNota3 = new JLabel("Nota3:");
+		lblNota3.setBounds(330, 126, 70, 15);
+		panelPrincipal.add(lblNota3);
+		
+		JTextPane textnota3 = new JTextPane();
+		textnota3.setBounds(390, 120, 70, 30);
+		panelPrincipal.add(textnota3);
+		
+		JLabel lblPromedio = new JLabel("Promedio:");
+		lblPromedio.setHorizontalAlignment(SwingConstants.LEFT);
+		lblPromedio.setFont(new Font("Dialog", Font.BOLD, 19));
+		lblPromedio.setBounds(23, 200, 128, 30);
+		panelPrincipal.add(lblPromedio);
+		
+		JLabel lblrespromedio = new JLabel("");
+		lblrespromedio.setBounds(150, 188, 280, 30);
+		panelPrincipal.add(lblrespromedio);
+		
+		JLabel lblResultado = new JLabel("Resultado:");
+		lblResultado.setHorizontalAlignment(SwingConstants.LEFT);
+		lblResultado.setFont(new Font("Dialog", Font.BOLD, 19));
+		lblResultado.setBounds(23, 242, 128, 30);
+		panelPrincipal.add(lblResultado);
+		
+		JLabel lblrespromedio_1 = new JLabel("");
+		lblrespromedio_1.setBounds(150, 230, 280, 30);
+		panelPrincipal.add(lblrespromedio_1);
+		
+		JButton btnCalcular = new JButton("Calcular");
+		btnCalcular.setBounds(400, 162, 117, 25);
+		panelPrincipal.add(btnCalcular);
+		
+	}
+}

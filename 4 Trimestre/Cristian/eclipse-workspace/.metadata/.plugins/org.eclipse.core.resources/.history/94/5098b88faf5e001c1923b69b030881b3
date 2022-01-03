@@ -1,0 +1,54 @@
+package Procesos;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Procesos {
+ArrayList<Usuarios>listaUsuarios;
+	
+	public Procesos() {
+
+		listaUsuarios=new ArrayList<Usuarios>();
+				
+	
+	}
+	
+	
+
+
+	public void guardarUsuario(Usuarios miUsuario) {
+		listaUsuarios.add(miUsuario);
+		JOptionPane.showMessageDialog(null, "Usuario agregado");
+		
+	}
+
+
+
+	public String imprimirUsuarios() {
+		String imp="";
+		if(listaUsuarios == null || listaUsuarios.size() == 0)
+		{
+			JOptionPane.showMessageDialog(null, "No hay personas que mostrar \n ", "ERROR",JOptionPane.ERROR_MESSAGE);
+		}
+		else {
+			
+			for (Usuarios usuarios : listaUsuarios) {
+				imp+=usuarios+"\n";
+			}	
+		}
+		return imp;
+	
+	}
+
+
+
+	public int calculaEdad(int yearActual, int yearUser, int mountActual, int mountUser, int dayActual, int dayUser) {
+		int años= yearActual-yearUser;
+	    int meses= mountActual-mountUser;
+	    int dias=dayActual-dayUser;
+		return años;
+	}
+
+
+}

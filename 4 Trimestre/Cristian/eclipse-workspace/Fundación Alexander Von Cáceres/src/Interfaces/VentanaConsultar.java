@@ -1,0 +1,190 @@
+package Interfaces;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import Procesos.Evento;
+import Procesos.Procesos;
+import javax.swing.JButton;
+import javax.swing.UIManager;
+
+public class VentanaConsultar extends JFrame implements ActionListener{
+
+	private JPanel panelPrincipal;
+	private JTextField textcodigo;
+	private JButton btnconsultar;
+	
+	 Procesos misProcesos;
+	 private JLabel lblnombre;
+	 private JLabel lbllugar;
+	 private JLabel lblexpositores;
+	 private JLabel lblparticipantes;
+	 private JLabel lbltemas;
+	 private JLabel lblrefrigerios;
+	
+
+
+	public VentanaConsultar() {
+		setBackground(UIManager.getColor("OptionPane.errorDialog.titlePane.shadow"));
+		misProcesos= new Procesos();
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize( 520, 472);
+		setTitle("EVENTOS");
+		setLocationRelativeTo(null);
+		setResizable(false);
+		iniciarComponentes();
+		
+	}
+	public void iniciarComponentes() {
+		panelPrincipal = new JPanel();
+		panelPrincipal.setBackground(UIManager.getColor("OptionPane.errorDialog.titlePane.foreground"));
+		panelPrincipal.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(panelPrincipal);
+		panelPrincipal.setLayout(null);
+		
+		JLabel lblTitulo = new JLabel("BUSCAR EVENTO");
+		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitulo.setFont(new Font("Dialog", Font.BOLD, 18));
+		lblTitulo.setForeground(new Color(255, 255, 255));
+		lblTitulo.setBounds(105, 0, 275, 48);
+		panelPrincipal.add(lblTitulo);
+		
+		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre.setForeground(Color.WHITE);
+		lblNombre.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblNombre.setBounds(105, 125, 84, 28);
+		panelPrincipal.add(lblNombre);
+		
+		JLabel lblCodigo = new JLabel("Codigo:");
+		lblCodigo.setForeground(Color.WHITE);
+		lblCodigo.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblCodigo.setBounds(105, 81, 84, 28);
+		panelPrincipal.add(lblCodigo);
+		
+		textcodigo = new JTextField();
+		textcodigo.setForeground(Color.WHITE);
+		textcodigo.setBackground(UIManager.getColor("OptionPane.errorDialog.border.background"));
+		textcodigo.setFont(new Font("Dialog", Font.PLAIN, 15));
+		textcodigo.setColumns(10);
+		textcodigo.setBounds(178, 85, 194, 28);
+		panelPrincipal.add(textcodigo);
+		
+		JLabel lblLugar = new JLabel("Lugar:");
+		lblLugar.setForeground(Color.WHITE);
+		lblLugar.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblLugar.setBounds(105, 165, 84, 28);
+		panelPrincipal.add(lblLugar);
+		
+		JLabel lblExpositores = new JLabel("Numero de Expositores:");
+		lblExpositores.setForeground(Color.WHITE);
+		lblExpositores.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblExpositores.setBounds(105, 203, 180, 28);
+		panelPrincipal.add(lblExpositores);
+		
+		JLabel lblParticipantes = new JLabel("Numero de Participantes:");
+		lblParticipantes.setForeground(Color.WHITE);
+		lblParticipantes.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblParticipantes.setBounds(105, 243, 194, 28);
+		panelPrincipal.add(lblParticipantes);
+		
+		JLabel lblRefrigerio = new JLabel("Refrigerios:");
+		lblRefrigerio.setForeground(Color.WHITE);
+		lblRefrigerio.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblRefrigerio.setBounds(105, 282, 84, 28);
+		panelPrincipal.add(lblRefrigerio);
+		
+		JLabel lblTemas = new JLabel("Temas:");
+		lblTemas.setForeground(Color.WHITE);
+		lblTemas.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblTemas.setBounds(105, 311, 84, 28);
+		panelPrincipal.add(lblTemas);
+		
+		
+		lblnombre = new JLabel("");
+		lblnombre.setFont(new Font("Dialog", Font.BOLD, 15));
+		lblnombre.setForeground(Color.WHITE);
+		lblnombre.setHorizontalAlignment(SwingConstants.LEFT);
+		lblnombre.setBounds(178, 125, 202, 28);
+		panelPrincipal.add(lblnombre);
+		
+		lbllugar = new JLabel("");
+		lbllugar.setForeground(Color.WHITE);
+		lbllugar.setFont(new Font("Dialog", Font.BOLD, 15));
+		lbllugar.setHorizontalAlignment(SwingConstants.LEFT);
+		lbllugar.setBackground(Color.BLACK);
+		lbllugar.setBounds(178, 163, 202, 28);
+		panelPrincipal.add(lbllugar);
+		
+		lblexpositores = new JLabel("");
+		lblexpositores.setFont(new Font("Dialog", Font.BOLD, 15));
+		lblexpositores.setForeground(Color.WHITE);
+		lblexpositores.setHorizontalAlignment(SwingConstants.LEFT);
+		lblexpositores.setBackground(Color.BLACK);
+		lblexpositores.setBounds(281, 203, 84, 28);
+		panelPrincipal.add(lblexpositores);
+		
+		lblparticipantes = new JLabel("");
+		lblparticipantes.setForeground(Color.WHITE);
+		lblparticipantes.setFont(new Font("Dialog", Font.BOLD, 15));
+		lblparticipantes.setHorizontalAlignment(SwingConstants.LEFT);
+		lblparticipantes.setBackground(Color.BLACK);
+		lblparticipantes.setBounds(291, 243, 84, 28);
+		panelPrincipal.add(lblparticipantes);
+		
+		lbltemas = new JLabel("");
+		lbltemas.setForeground(Color.WHITE);
+		lbltemas.setFont(new Font("Dialog", Font.BOLD, 15));
+		lbltemas.setHorizontalAlignment(SwingConstants.LEFT);
+		lbltemas.setBackground(Color.BLACK);
+		lbltemas.setBounds(162, 311, 218, 28);
+		panelPrincipal.add(lbltemas);
+		
+		lblrefrigerios = new JLabel("");
+		lblrefrigerios.setFont(new Font("Dialog", Font.BOLD, 15));
+		lblrefrigerios.setForeground(Color.WHITE);
+		lblrefrigerios.setHorizontalAlignment(SwingConstants.LEFT);
+		lblrefrigerios.setBackground(Color.BLACK);
+		lblrefrigerios.setBounds(201, 283, 84, 28);
+		panelPrincipal.add(lblrefrigerios);
+		
+		btnconsultar = new JButton("Consultar");
+		btnconsultar.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnconsultar.setBackground(Color.PINK);
+		btnconsultar.setForeground(Color.BLACK);
+		btnconsultar.setBounds(190, 351, 127, 36);
+		btnconsultar.addActionListener(this);
+		panelPrincipal.add(btnconsultar);
+
+}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==btnconsultar) {
+			Evento miEvento=misProcesos.consultarEvento(textcodigo.getText());
+			if (miEvento!=null) {
+				lblnombre.setText(miEvento.getNombre());
+				lbllugar.setText(miEvento.getLugar());
+				lblparticipantes.setText(miEvento.getParticipantes()+"");
+				lblexpositores.setText(miEvento.getExpositores()+"");
+				lblrefrigerios.setText(miEvento.getRefrigerios());
+				lbltemas.setText(miEvento.getTemas());	
+				}
+			else {
+				JOptionPane.showMessageDialog(null, "Evento no existe");
+			}
+			
+		}
+		
+	}
+	public void asignarProcesos(Procesos misProcesos) {
+		this.misProcesos=misProcesos;
+		
+		
+	}
+}
