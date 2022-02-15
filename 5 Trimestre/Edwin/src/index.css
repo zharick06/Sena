@@ -1,0 +1,63 @@
+.btn1{
+  background-color: rgb(54, 2, 136);
+  margin-left: 2rem;
+  width: 5.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(28, 1, 53);
+  margin-top: 2rem;
+  color: white;
+}
+
+.btn1:hover{
+  background-color: black;
+  color:white;
+  border: 00.1rem dotted white;
+}
+.btn2{
+  background-color: rgb(54, 2, 136);
+  margin-left: 2rem;
+  width: 5.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(28, 1, 53);
+  margin-top: 2rem;
+}
+
+.btn2:hover:hover{
+  border: solid 0.2rem purple;
+  background-color: blueviolet;
+  color:white;
+}
+.Main{
+  height: 74vh;
+}
+.imagen{
+  width: 50rem;
+  margin-top: 6rem;
+  filter: drop-shadow(14px 14px 9px black);
+  
+}
+.imagen:hover{
+  filter: blur(0.1rem);
+}
+
+body{
+
+  background: linear-gradient(10deg, rgb(54, 2, 136), black);
+  
+}
+
+.contenidoF{
+  width: 20rem;
+  height: 25rem;
+  border-radius: 2rem;
+  color: black;
+  background: white;
+
+
+}
+
+.formulario{
+  height: 75vh;
+}

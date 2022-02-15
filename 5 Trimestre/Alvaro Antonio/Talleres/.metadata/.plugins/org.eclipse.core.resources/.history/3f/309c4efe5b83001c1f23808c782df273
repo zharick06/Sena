@@ -1,0 +1,11 @@
+package taller1;
+
+import javax.swing.JOptionPane;
+
+public class Taller1 {
+	public static void main(String[] args) {
+		JOptionPane.showInputDialog(null, "Cantidad en bodega: ");
+		
+	}
+
+}

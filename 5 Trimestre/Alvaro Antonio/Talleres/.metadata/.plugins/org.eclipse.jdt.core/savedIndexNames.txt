@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+E:\Sena\5 Trimestre\Alvaro A\Talleres\.metadata\.plugins\org.eclipse.jdt.core
+2480787797.index
+2266204587.index

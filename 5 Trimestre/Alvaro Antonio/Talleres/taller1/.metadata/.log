@@ -1,0 +1,80 @@
+!SESSION 2022-02-07 14:59:44.178 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_CO
+Framework arguments:  -product org.eclipse.epp.package.java.product /media/zharick/ZHARICK/Sena/5 Trimestre/Alvaro Antonio/Talleres/Taller1/Alvaro/src/Taller1.java
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product /media/zharick/ZHARICK/Sena/5 Trimestre/Alvaro Antonio/Talleres/Taller1/Alvaro/src/Taller1.java
+
+!ENTRY org.eclipse.jface 2 0 2022-02-07 15:00:16.482
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-07 15:00:16.482
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@175957b6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b7a4930,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.urischeme 4 0 2022-02-07 15:00:28.026
+!MESSAGE Index 1 out of bounds for length 1
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at org.eclipse.urischeme.internal.registration.DesktopFileWriter.getProperties(DesktopFileWriter.java:214)
+	at org.eclipse.urischeme.internal.registration.DesktopFileWriter.<init>(DesktopFileWriter.java:51)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.getHandlerLocationFromDesktopFileIfSchemeRegistered(RegistrationLinux.java:139)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.determineHandlerLocation(RegistrationLinux.java:91)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.getSchemesInformation(RegistrationLinux.java:78)
+	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:87)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2022-02-07 15:01:43.976 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_CO
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-02-07 15:02:10.634
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-02-07 15:02:10.634
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f12d5e0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6604f246,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.urischeme 4 0 2022-02-07 15:02:24.681
+!MESSAGE Index 1 out of bounds for length 1
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at org.eclipse.urischeme.internal.registration.DesktopFileWriter.getProperties(DesktopFileWriter.java:214)
+	at org.eclipse.urischeme.internal.registration.DesktopFileWriter.<init>(DesktopFileWriter.java:51)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.getHandlerLocationFromDesktopFileIfSchemeRegistered(RegistrationLinux.java:139)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.determineHandlerLocation(RegistrationLinux.java:91)
+	at org.eclipse.urischeme.internal.registration.RegistrationLinux.getSchemesInformation(RegistrationLinux.java:78)
+	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:87)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

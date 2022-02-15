@@ -1,0 +1,52 @@
+
+import React from 'react';
+import './App.css';
+
+/* function Otro(props){
+  return(
+    <div id='sapo'>{props.mytext}</div>
+
+  );
+ {<button onClick={()=> this.setState({show: false})} >Cambiar</button>} */
+
+
+
+
+
+class Otro extends React.Component{
+  state={
+    show: true
+  }
+  cambiarShow= () =>{
+    this.setState({show: !this.state.show})
+  }
+  render(){
+    if(this.state.show){
+      return(
+        <div id='sapo'>
+          {this.props.mytext}
+          <button onClick={this.cambiarShow} >Cambiar</button>
+          </div>)
+    }
+    else{
+     return( <h3>no hay nada we
+       <button onClick={this.cambiarShow} >Cambiar</button>
+     </h3>
+      )
+    }
+   
+
+    
+  }
+}
+
+
+function App() {
+  return (
+    <div id='hello'>Hello worl: <Otro mytext="lucia"/><br></br>
+     </div>
+  );      
+}
+
+export default App;
+

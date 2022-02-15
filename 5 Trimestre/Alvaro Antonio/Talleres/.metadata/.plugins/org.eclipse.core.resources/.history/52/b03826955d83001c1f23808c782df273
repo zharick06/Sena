@@ -1,0 +1,27 @@
+package taller1;
+
+import javax.swing.JOptionPane;
+
+public class Taller1 {
+	public static void main(String[] args) {
+		int cantidadB=500;
+		int cantidadC=1000000;
+		int cantidadM=600;
+		int pedido=200;
+		
+		
+		if (cantidadB<cantidadM) {
+			
+			double xd=pedido*3350;
+			if (pedido>cantidadC) {
+				JOptionPane.showMessageDialog(null,"No se puede realizar el pedidio ");
+			}
+			JOptionPane.showMessageDialog(null,"cantidad total: ");
+			
+		}
+		
+		
+		
+	}
+
+}

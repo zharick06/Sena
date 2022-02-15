@@ -1,0 +1,23 @@
+package taller1;
+
+import javax.swing.JOptionPane;
+
+public class Taller1 {
+	public static void main(String[] args) {
+		int cantidadB=500;
+		int cantidadC=1000000;
+		int cantidadM=600;
+		
+		
+		if (cantidadB<cantidadM) {
+			
+			double cantidadT= cantidadB-cantidadM;
+			JOptionPane.showMessageDialog(null,"cantidad total: "+ cantidadT);
+			
+		}
+		
+		
+		
+	}
+
+}
