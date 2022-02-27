@@ -1,2 +1,3 @@
 # Sena
-#todos los  documentos y talleres en el programa de formacion de ADSI  2021 a 2022
+#Todos los documentos y talleres que se realizaron en ADSI 2021 a 2022
+
