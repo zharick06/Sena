@@ -1,7 +1,8 @@
+#se importa el documento pruebas con todos sus valores
 from Prueba import *
 
-         
-for i in range(100):
-    print("Prueba:",str(i+1))
+#Aqui  ser ejecuta la preba          
+for i in range(10):
+    #se llama la funcion
     prueba()
-    print("*"*50)        
+    print("*"*50)    
