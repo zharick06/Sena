@@ -1,16 +1,15 @@
 import {Header} from '../Layout/Header';
-import {Main} from '../Layout/Main';
 import { Footer } from '../Layout/Footer';
+import { Formulario } from '../Layout/Formulario';
 
 
 
-export function Home(){
+export function Contacto(){
     return(
         <div className='home'>
-            <Header/>     
-            <Main/>
+            <Header/>
+            <Formulario/> 
             <Footer/>
         </div>
     )
 }
-

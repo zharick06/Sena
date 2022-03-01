@@ -18,7 +18,7 @@
 	 );
 
 	CREATE TABLE restaurante(
-	 nit serial primary key not null,
+	 nit int primary key not null,
 	nombre char(70)NOT NULL,
 	 correo char(50)NOT NULL,
 	 logo bytea,
