@@ -1,12 +1,12 @@
-import './App.css';
-import { Home } from './Components/Page/Home';
+import {Form} from"../src/components/pages/form"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-     <Home/>
-  
+    <div className="main">
+      <Form/>
     </div>
+  
   );
 }
 
