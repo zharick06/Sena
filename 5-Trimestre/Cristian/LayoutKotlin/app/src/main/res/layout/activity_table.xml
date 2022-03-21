@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actividades.TableActivity">
+
+    <TableRow
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Login"
+            android:textSize="40sp"
+            android:textColor="#aa0000"
+            android:textStyle="bold"
+            android:id="@+id/textViewLogin" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nombre"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/textViewNombre" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:id="@+id/editTextNombre" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Password"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/textViewPass" />
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:id="@+id/editTextPass" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_span="2"
+            android:id="@+id/button" />
+    </TableRow>
+</TableLayout>

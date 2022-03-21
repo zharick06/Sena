@@ -2,145 +2,17 @@
 -- Please log an issue at https://redmine.postgresql.org/projects/pgadmin4/issues/new if you find any bugs, including reproduction steps.
 BEGIN;
 
-
-CREATE TABLE IF NOT EXISTS public.app_caja
-(
-    id bigint NOT NULL DEFAULT nextval('app_caja_id_seq'::regclass),
-    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    restaurante_id integer,
-    CONSTRAINT app_caja_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_categoria
-(
-    id bigint NOT NULL DEFAULT nextval('app_categoria_id_seq'::regclass),
-    nombre character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT app_categoria_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_cocina
-(
-    id bigint NOT NULL DEFAULT nextval('app_cocina_id_seq'::regclass),
-    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    restaurante_id integer,
-    CONSTRAINT app_cocina_pkey PRIMARY KEY (id)
-);
-
 CREATE TABLE IF NOT EXISTS public.app_departamento
 (
     id bigint NOT NULL DEFAULT nextval('app_departamento_id_seq'::regclass),
     nombre character varying(20) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT app_departamento_pkey PRIMARY KEY (id)
 );
-
-CREATE TABLE IF NOT EXISTS public.app_destallepedido
-(
-    id bigint NOT NULL DEFAULT nextval('app_destallepedido_id_seq'::regclass),
-    cantidad integer NOT NULL,
-    valor_unitario integer NOT NULL,
-    articulo_id bigint,
-    pedido_id bigint,
-    CONSTRAINT app_destallepedido_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_estado
-(
-    id bigint NOT NULL DEFAULT nextval('app_estado_id_seq'::regclass),
-    hora_entrada time without time zone NOT NULL,
-    hora_salida time without time zone NOT NULL,
-    estado character varying(2) COLLATE pg_catalog."default" NOT NULL,
-    mesero_id character varying(12) COLLATE pg_catalog."default",
-    restaurante_id integer,
-    CONSTRAINT app_estado_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_factura
-(
-    id bigint NOT NULL DEFAULT nextval('app_factura_id_seq'::regclass),
-    total integer NOT NULL,
-    fecha date NOT NULL,
-    mesero_id character varying(12) COLLATE pg_catalog."default",
-    pedido_id bigint,
-    restaurante_id integer,
-    CONSTRAINT app_factura_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_menu
-(
-    id bigint NOT NULL DEFAULT nextval('app_menu_id_seq'::regclass),
-    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    descripcion character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    valor integer NOT NULL,
-    categoria_id bigint,
-    restaurante_id integer,
-    foto character varying(100) COLLATE pg_catalog."default",
-    CONSTRAINT app_menu_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_mesas
-(
-    id bigint NOT NULL DEFAULT nextval('app_mesas_id_seq'::regclass),
-    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    estado character varying(1) COLLATE pg_catalog."default" NOT NULL,
-    restaurante_id integer,
-    CONSTRAINT app_mesas_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_mesero
-(
-    documento character varying(12) COLLATE pg_catalog."default" NOT NULL,
-    tipodoc character varying(2) COLLATE pg_catalog."default" NOT NULL,
-    nombre1 character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    nombre2 character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    apellido1 character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    apellido2 character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    correo character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    telefono character varying(12) COLLATE pg_catalog."default" NOT NULL,
-    genero character varying(1) COLLATE pg_catalog."default" NOT NULL,
-    direccion character varying(30) COLLATE pg_catalog."default" NOT NULL,
-    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    departamento_id bigint,
-    municipio_id bigint,
-    CONSTRAINT app_mesero_pkey PRIMARY KEY (documento)
-);
-
 CREATE TABLE IF NOT EXISTS public.app_municipio
 (
     id bigint NOT NULL DEFAULT nextval('app_municipio_id_seq'::regclass),
     nombre character varying(20) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT app_municipio_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_oferta
-(
-    id bigint NOT NULL DEFAULT nextval('app_oferta_id_seq'::regclass),
-    descripcion character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    pago character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    fecha_publicacion date,
-    restaurante_id integer,
-    CONSTRAINT app_oferta_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_pedido
-(
-    id bigint NOT NULL DEFAULT nextval('app_pedido_id_seq'::regclass),
-    estado character varying(2) COLLATE pg_catalog."default" NOT NULL,
-    fecha date NOT NULL,
-    mesa_id bigint,
-    restaurante_id integer,
-    CONSTRAINT app_pedido_pkey PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS public.app_postulados
-(
-    id bigint NOT NULL DEFAULT nextval('app_postulados8_id_seq'::regclass),
-    fecha date NOT NULL,
-    mesero_id character varying(12) COLLATE pg_catalog."default",
-    oferta_id bigint,
-    CONSTRAINT app_postulados8_pkey PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS public.app_restaurante
@@ -157,6 +29,133 @@ CREATE TABLE IF NOT EXISTS public.app_restaurante
     municipio_id bigint,
     CONSTRAINT app_restaurante_pkey PRIMARY KEY (nit)
 );
+CREATE TABLE IF NOT EXISTS public.app_cocina
+(
+    id bigint NOT NULL DEFAULT nextval('app_cocina_id_seq'::regclass),
+    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    restaurante_id integer,
+    CONSTRAINT app_cocina_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_caja
+(
+    id bigint NOT NULL DEFAULT nextval('app_caja_id_seq'::regclass),
+    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    restaurante_id integer,
+    CONSTRAINT app_caja_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_mesas
+(
+    id bigint NOT NULL DEFAULT nextval('app_mesas_id_seq'::regclass),
+    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    estado character varying(1) COLLATE pg_catalog."default" NOT NULL,
+    restaurante_id integer,
+    CONSTRAINT app_mesas_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_mesero
+(
+    documento character varying(12) COLLATE pg_catalog."default" NOT NULL,
+    tipodoc character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    nombre1 character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    nombre2 character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    apellido1 character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    apellido2 character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    correo character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    telefono character varying(12) COLLATE pg_catalog."default" NOT NULL,
+    genero character varying(1) COLLATE pg_catalog."default" NOT NULL,
+    direccion character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    usuario character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "contraseña" character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    departamento_id bigint,
+    municipio_id bigint,
+    foto character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT app_mesero_pkey PRIMARY KEY (documento)
+);
+CREATE TABLE IF NOT EXISTS public.app_estado
+(
+    id bigint NOT NULL DEFAULT nextval('app_estado_id_seq'::regclass),
+    hora_entrada time without time zone,
+    hora_salida time without time zone NOT NULL,
+    estado character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    mesero_id character varying(12) COLLATE pg_catalog."default",
+    restaurante_id integer,
+    CONSTRAINT app_estado_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_oferta
+(
+    id bigint NOT NULL DEFAULT nextval('app_oferta_id_seq'::regclass),
+    descripcion character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    pago character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    fecha_publicacion date,
+    restaurante_id integer,
+    CONSTRAINT app_oferta_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_postulados
+(
+    id bigint NOT NULL DEFAULT nextval('app_postulados8_id_seq'::regclass),
+    fecha date NOT NULL,
+    mesero_id character varying(12) COLLATE pg_catalog."default",
+    oferta_id bigint,
+    CONSTRAINT app_postulados8_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.app_menu
+(
+    id bigint NOT NULL DEFAULT nextval('app_menu_id_seq'::regclass),
+    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    descripcion character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    valor integer NOT NULL,
+    categoria_id bigint,
+    restaurante_id integer,
+    foto character varying(100) COLLATE pg_catalog."default",
+    CONSTRAINT app_menu_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_categoria
+(
+    id bigint NOT NULL DEFAULT nextval('app_categoria_id_seq'::regclass),
+    nombre character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT app_categoria_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_pedido
+(
+    id bigint NOT NULL DEFAULT nextval('app_pedido_id_seq'::regclass),
+    estado character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    fecha date NOT NULL,
+    mesa_id bigint,
+    restaurante_id integer,
+    CONSTRAINT app_pedido_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_destallepedido
+(
+    id bigint NOT NULL DEFAULT nextval('app_destallepedido_id_seq'::regclass),
+    cantidad integer NOT NULL,
+    valor_unitario integer NOT NULL,
+    articulo_id bigint,
+    pedido_id bigint,
+    CONSTRAINT app_destallepedido_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_factura
+(
+    id bigint NOT NULL DEFAULT nextval('app_factura_id_seq'::regclass),
+    total integer NOT NULL,
+    fecha date NOT NULL,
+    mesero_id character varying(12) COLLATE pg_catalog."default",
+    pedido_id bigint,
+    restaurante_id integer,
+    CONSTRAINT app_factura_pkey PRIMARY KEY (id)
+);
+CREATE TABLE IF NOT EXISTS public.app_contacto
+(
+    id bigint NOT NULL DEFAULT nextval('app_contacto_id_seq'::regclass),
+    nombre character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    correo character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    mensaje character varying(500) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT app_contacto_pkey PRIMARY KEY (id)
+);
+
+
+
 
 CREATE TABLE IF NOT EXISTS public.auth_group
 (
@@ -298,7 +297,7 @@ ALTER TABLE IF EXISTS public.app_estado
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     DEFERRABLE INITIALLY DEFERRED;
-CREATE INDEX IF NOT EXISTS app_estado_mesero_id_b92455ea_like
+CREATE INDEX IF NOT EXISTS app_estado_mesero_id_b92455ea
     ON public.app_estado(mesero_id);
 
 
@@ -318,7 +317,7 @@ ALTER TABLE IF EXISTS public.app_factura
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     DEFERRABLE INITIALLY DEFERRED;
-CREATE INDEX IF NOT EXISTS app_factura_mesero_id_0188bbce
+CREATE INDEX IF NOT EXISTS app_factura_mesero_id_0188bbce_like
     ON public.app_factura(mesero_id);
 
 
@@ -428,7 +427,7 @@ ALTER TABLE IF EXISTS public.app_postulados
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     DEFERRABLE INITIALLY DEFERRED;
-CREATE INDEX IF NOT EXISTS app_postulados8_mesero_id_531ef682_like
+CREATE INDEX IF NOT EXISTS app_postulados8_mesero_id_531ef682
     ON public.app_postulados(mesero_id);
 
 
