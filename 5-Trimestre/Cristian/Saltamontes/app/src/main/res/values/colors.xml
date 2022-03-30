@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="verde_Supersuave">#e3f1e2</color>
+    <color name="verde_oscurito">#378752</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="verde_menta">#badabf</color>
+    <color name="verde_suave">#7bb38d</color>
+</resources>

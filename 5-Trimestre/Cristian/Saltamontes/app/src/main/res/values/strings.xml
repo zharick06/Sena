@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Saltamontes</string>
+    <string name="que">¿Qué es?</string>
+    <string name="Que_Es">Saltamontes es una app pensada para el promedio de notas, consiste en poner la informacion del estudiante, sus materias y notas finales de cada una de estas, para posteriormente el sistema calcular su promedio, asiganr si gano o perdio y en caso de perder dice si puede recuperar o definitivamente perdio.</string>
+    <string name="comoF">¿Como Funciona?</string>
+    <string name="texto">Al abrir la aplicacion te aparecera el menu principal que costa de tres botones para su correcto funcionamiento:</string>
+    <string name="regis">Nuevo Registro nos presentara un formulario en el cual debera ingresar la
+        informacion del estudiantes, sus materias y sus notas al precionar la el boton Calcular lo
+        llevara a la pantalla de resultados donde te dira si gana, pierde o puede recuperar.
+</string>
+    <string name="esta">Estadisticas nos presentara la cantidad todal de estudiantes registrados en
+        la aplicacion, la cantidad de estudiantes que perdieron y la cantidad de estudiantes que
+        ganaron.
+</string>
+    <string name="ayuda">Ayuda es la pantalla en la que estamos parados actualmente, nos presenta
+        todo el instructivo de la aplicacion y su funcionamiento</string>
+
+</resources>

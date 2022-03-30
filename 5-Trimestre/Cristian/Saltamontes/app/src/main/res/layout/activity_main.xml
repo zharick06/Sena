@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150sp"
+        android:layout_height="200sp"
+        android:layout_marginLeft="130dp"
+        app:srcCompat="@drawable/saltamontes" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Mis pequeños saltamontes"
+        android:textAlignment="center"
+        android:textColor="@color/verde_oscurito"
+        android:textSize="27dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="30dp"
+        android:text="REGISTRAR" />
+    <Button
+        android:id="@+id/btnEstadisticas"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        android:text="Estadisticas" />
+    <Button
+        android:id="@+id/btnAyuda"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        android:text="Ayuda" />
+
+
+</LinearLayout>

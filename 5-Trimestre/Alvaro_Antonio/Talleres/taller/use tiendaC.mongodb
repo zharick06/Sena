@@ -1,0 +1,35 @@
+use tiendaC
+
+db.producto.find()
+dbproductos
+show databases
+show collections
+
+
+db.createCollection('gama_producto')
+db.createCollection('producto')
+db.createCollection('gama_producto')
+
+db.gama_producto.insertMany([{gama:"media", descripcion:"esta gama es media", descripcion_html:"es un html", imagen:"ndaiflyrsgbfhbrjhl6bbfhbuiseghjbd6kd.jpg"},
+                              {gama:"media-alta", descripcion:"esta gama es media-alta", descripcion_html:"es un html", imagen:"ndaiflyrsgbfhbrjhl6bbfhbuiseghjbd6kd.png"},
+                              {gama:"media-baja", descripcion:"esta gama es media-baja", descripcion_html:"es un html", imagen:"ndaiflyrsgbfhbrjhl6bbfhbuiseghjbd6kd.jepg"},
+                              {gama:"alta", descripcion:"esta gama es alta", descripcion_html:"es un html", imagen:"ndaiflyrsgbfhbrjhl6bbfhbuiseghjbd6kd.raw"},
+                              {gama:"baja", descripcion:"esta gama es baja", descripcion_html:"es un html", imagen:"ndaiflyrsgbfhbrjhl6bbfhbuiseghjbd6kd.svg"}])
+
+
+
+
+
+db.producto.insertMany([{nombre:"iPhone 13 Pro",gama:"alta",dimenciones:"16,08cm x 7,81cm",provedor:"apple",descripcion:"Con una potencia insignia de primer nivel, una pantalla impresionante.",cantidad_en_stock:120, proveedor_venta:600000.00,precio_proveedor:600000.00},
+                        {nombre:"Samsung Galaxy Note S20 Ultra",gama:"media-alta",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"Motorola Moto G Power",gama:"media-alta",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"Xiaomi Redmi Note 10",gama:"baja",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"Samsung Galaxy A03s",gama:"baja",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"'Nokia 5.4",gama:"media-baja'",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"OPPO Reno 5 Lite",gama:"media-alta",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"Xiaomi Mi 11 Lite 5G",gama:"alta",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"OnePlus Nord 2",gama:"media",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"OnePlus Nord CE",gama:"media",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""},
+                        {nombre:"iPhone SE",gama:"media",dimenciones:"",provedor:"",descripcion:"",cantidad_en_stock:"", proveedor_venta:"",precio_proveedor:""}])
+
+db.albumnes.drop()
